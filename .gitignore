@@ -1,0 +1,8 @@
+# Hemmeligheder og data - må aldrig på GitHub
+config.php
+data/
+
+# Lokale filer
+gammel-node-version/
+node_modules/
+.claude/

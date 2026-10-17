@@ -1,0 +1,13 @@
+Options -Indexes
+DirectoryIndex index.html
+
+# Skjul filer, der ikke skal kunne hentes udefra
+<FilesMatch "^(config\.php|README\.md|\.user\.ini|\.git.*|\.ftp-deploy-sync-state\.json)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
